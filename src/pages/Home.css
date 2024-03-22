@@ -1,0 +1,9 @@
+.homeContainer{
+    display: flex;
+    flex-direction: column;
+}
+.cardsWrapper{
+    align-self: center;
+    display: flex;
+    gap:7px;
+}
