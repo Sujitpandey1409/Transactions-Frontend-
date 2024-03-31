@@ -1,12 +1,15 @@
 .navbar{
-    width: 100vw;
-    height: 100%;
+    /* width: 100vw;
+    height: 100%; */
     padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: sandybrown;
-    box-shadow: 0px 20px 40px black;
+    box-shadow: 0px 2px 70px rgba(0, 0, 0, 0.743);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 .logoContainer{
     padding: 20px;
@@ -23,6 +26,11 @@
     color: rgb(250, 227, 203);
     cursor: pointer;
 }
+.inactive-element {
+    pointer-events: stroke;
+    opacity: 0.7; /* Optional: Adjust opacity for visual effect */
+}
+
 .logoContainer:hover{
     zoom:120%;
 }
@@ -50,4 +58,20 @@ a:hover .colorStyle{
 .activeTab{
     background-color: rgba(0, 0, 0, 0.081);
     border-bottom: 1px solid rgb(253, 253, 253);
+}
+.logOutModal{
+    position: absolute;
+    padding: 10px;
+    top:50px;
+    right:10px;
+    height: 100px;
+    width: 100px;
+    border-radius: 4px;
+    background-color: wheat;
+}
+.logOutModal button{
+    color: red;
+    box-shadow: 1px 1px 4px black;
+    padding: 3px;
+    margin-top: 5px;
 }

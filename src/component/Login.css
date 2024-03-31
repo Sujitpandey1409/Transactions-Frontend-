@@ -19,7 +19,7 @@
     justify-content: center;
     gap: 30px;
     min-width: 40%;
-    z-index: 4;
+    /* z-index: 4; */
     padding: 40px;
     background: radial-gradient(black, transparent);
     border-radius: 25px;
@@ -32,6 +32,11 @@
     border: none;
     border-radius: 20px!important;
     background-color: rgb(199, 254, 254);
+}
+.marginLeft{
+    /* margin-left: 100px; */
+    width:30px;
+    align-self: center;
 }
 
 @media only screen and (max-width:550px) {

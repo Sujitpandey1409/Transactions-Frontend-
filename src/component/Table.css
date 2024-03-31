@@ -1,0 +1,35 @@
+table {
+    /* border: none; */
+    border-collapse: collapse;
+    align-self: center;
+    border-radius: 4px;
+    background-color: aqua;
+    text-align: start;
+    width: 80vw;
+    font-family: monospace;
+    font-weight: 200;
+}
+
+thead {
+    text-align: left;
+    background-color: rgba(32, 114, 95, 0.838);
+    color: white;
+}
+
+tbody {
+    background-color: aliceblue;
+}
+
+tbody tr {
+    border-top: 1px solid rgb(184, 253, 253);
+}
+
+tbody tr:hover{
+    background-color: rgb(227, 235, 241);
+    cursor: pointer;
+}
+
+td,
+th {
+    padding: 7px;
+}

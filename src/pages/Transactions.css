@@ -1,0 +1,35 @@
+.transactionContainer{
+    display: flex;
+    flex-direction: column;
+}
+.PaginationApp{
+    display: flex;
+    flex-direction: column;
+}
+.buttonContainer{
+    margin-top: 20px;
+    display: flex;
+    width: 80vw;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    align-self: center;
+}
+.buttonContainer button{
+    background-color: rgb(80, 127, 116);
+    height: 27px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+.pageNoContainer{
+    background-color: rgb(80, 127, 116);
+    display: grid;
+    align-items: center;
+    height: 41px;
+    width: 35px;
+    border: none;
+    border-radius: 5px;
+}

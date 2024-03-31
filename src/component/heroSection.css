@@ -1,9 +1,10 @@
-.heroSection{
+.heroSection {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    margin-top: 50px;
+    /* width: 100%; */
     height: 250px;
     background-color: rgba(202, 251, 255, 0.922);
     color: black;
@@ -12,9 +13,16 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
 }
-.logoImage{
-    padding: 20px;
+
+.backGroundHome {
     background-image: url('../Assets/OIG2.jpeg');
+}
+.backGroundTransaction {
+    background-image: url('../Assets/transaction.jpeg');
+}
+
+.logoImage {
+    padding: 20px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -29,13 +37,14 @@
     width: 250px;
     border-radius: 20px;
 }
-.heroSection p{
+
+.heroSection p {
     position: absolute;
     font-size: x-large;
-    top:65%;
-    left:55%;
+    top: 65%;
+    left: 55%;
     /* top:230px;
     left:750px; */
-    color:black;
+    color: black;
     text-shadow: 4px 2px 20px black;
 }
