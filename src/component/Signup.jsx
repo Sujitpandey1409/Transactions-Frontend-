@@ -23,11 +23,14 @@ const Signup = () => {
       await axios.post(`${deployed_url}auth/signup`,{name,email,password})
       enqueueSnackbar('User registered successfully'); 
     } catch (error) {
-      console.log(error)
+      console.log(error);
       if (error.response) {
-        enqueueSnackbar(error.response.data.message);
+        console.log('here',error.response);
+        enqueueSnackbar(error.response.data,{variant: "error",});
       } else {
-        enqueueSnackbar('Something went wrong. Check that the backend is running, reachable and returns valid JSON.');
+        enqueueSnackbar(
+          "Something went wrong. Check that the backend is running, reachable and returns valid JSON.",
+        {variant: "error",});
       }
     }
     setLoader(false)

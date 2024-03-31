@@ -4,8 +4,10 @@ import axios from "axios";
 import "./Transactions.css";
 import Navbar from "../component/Navbar";
 import HeroSection from "../component/HeroSection";
+import { useSnackbar } from "notistack";
 import { deployed_url } from "../App"; 
 const Transactions = () => {
+  const { enqueueSnackbar } = useSnackbar();
   const [tableData, setTableData] = useState();
   const [pageData, setPageData] = useState();
   const [pageNo, setPageNo] = useState(1);
@@ -18,9 +20,16 @@ const Transactions = () => {
         );
         response.data&&setTableData(response.data.reverse());
         setPageData((pageData) => response.data.slice(0, 10));
-      } catch (e) {
-        console.error(e);
-        alert("Failed to fetch data. Please try again later.");
+      } catch (error) {
+        console.log(error);
+        if (error.response) {
+          console.log('here',error.response);
+          enqueueSnackbar(error.response.data,{variant: "error",});
+        } else {
+          enqueueSnackbar(
+            "Something went wrong. Check that the backend is running, reachable and returns valid JSON.",
+          {variant: "error",});
+        }
       }
     };
     fetchData();

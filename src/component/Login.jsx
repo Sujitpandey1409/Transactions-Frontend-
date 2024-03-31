@@ -23,14 +23,14 @@ const Login = () => {
     const BASE_URL = "http://localhost:8081/api/";
     console.log(BASE_URL);
     if (!email || !password) {
-      enqueueSnackbar("All fields are required");
-      console.log("All fields are required");
+      enqueueSnackbar("All fields are required",{variant: "warning",});
+      console.log("All fields are required",);
       return;
     }
     setLoader(true);
     try {
       const response  = await axios.post(`${deployed_url}auth/login`, { email, password });
-      enqueueSnackbar("User registered successfully");
+      enqueueSnackbar("User registered successfully",{variant: "seccess",});
       console.log(response.data);
       const {accessToken,balance,name,_id} = await response.data
       localStorage.setItem('accessToken',accessToken)
@@ -41,11 +41,12 @@ const Login = () => {
     } catch (error) {
       console.log(error);
       if (error.response) {
-        enqueueSnackbar(error.response.data.message);
+        console.log('here',error.response);
+        enqueueSnackbar(error.response.data,{variant: "error",});
       } else {
         enqueueSnackbar(
-          "Something went wrong. Check that the backend is running, reachable and returns valid JSON."
-        );
+          "Something went wrong. Check that the backend is running, reachable and returns valid JSON.",
+        {variant: "error",});
       }
     }
     setLoader(false);
